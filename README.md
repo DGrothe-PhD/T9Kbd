@@ -2,7 +2,8 @@
 
 T9 keyboard app for Windows.
 
-Type by click or number keys of your keyboard.
+Type by clicking on the buttons or using the number keys of your keyboard. You can enter a full text with just one finger.
+
 ## Shortcuts
 
 |Shortcut   | Function            |
