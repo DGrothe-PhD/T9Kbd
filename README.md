@@ -11,3 +11,5 @@ Type by click or number keys of your keyboard.
 | `F3`      | Copy to clipboard   |
 |`Backspace`| Delete last letter  |
 | `F6`      | Clear text field    |
+
+[List of symbols for each button](./doc/Symbols.md)
