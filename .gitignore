@@ -1,0 +1,7 @@
+bin/
+obj/
+.vs/
+*.user
+src/Properties/PublishProfiles/
+src/Properties/Settings.Designer.cs
+src/Properties/Settings.settings
