@@ -5,27 +5,35 @@ using System.Text;
 
 namespace T9KeyboardApp
 {
+    public enum Mode
+    {
+        Normal,
+        Capital,
+        CapsLock,
+        Numeric
+    }
     public static class Extensions
     {
         public static String Backspace(this String str)
         {
-            if(String.IsNullOrEmpty(str)) return str;
+            if (String.IsNullOrEmpty(str)) return str;
             return str[..^1];
         }
     }
     public class ButtonKey
     {
-        //prior to C# 8
         private readonly List<char> keys;
-        private readonly byte number;
+        private readonly string name;
+        public string Name { get => name; }
         private byte hittimes = 0;
-        public ButtonKey(byte number, params char[] chars) {
+        public ButtonKey(byte number, params char[] chars)
+        {
             keys = new List<char>();
             foreach (char c in chars)
             {
                 keys.Add(c);
             }
-            this.number = number;
+            this.name = "" + number;
             this.hittimes = 0;
         }
 
@@ -36,21 +44,44 @@ namespace T9KeyboardApp
             {
                 keys.Add(c);
             }
-            this.number = number;
+            this.name = "" + number;
+        }
+
+        public ButtonKey(string name, string chars)
+        {
+            keys = new List<char>();
+            foreach (char c in chars)
+            {
+                keys.Add(c);
+            }
+            this.name = name;
         }
 
         public char Value()
         {
-            if (hittimes < 1 || hittimes - 1 > keys.Count)
+            if (hittimes < 1 || hittimes > keys.Count)
             {
-                return number.ToString()[0];
+                return name.ToString()[0];
             }
-            return keys[hittimes-1];
+            return keys[hittimes - 1];
         }
 
-        public char Key()
+        public char? Key(Mode entryMode = Mode.Normal)
         {
-            char c = Value();
+            char? c = null;
+            switch (entryMode)
+            {
+                case Mode.Normal:
+                    c = Value();
+                    break;
+                case Mode.Numeric:
+                    c = Name[0];
+                    break;
+                default:
+                    c = char.ToUpper(Value());
+                    break;
+            }
+
             Reset();
             return c;
         }
@@ -61,18 +92,24 @@ namespace T9KeyboardApp
 
     public static class Buttons
     {
-        public static readonly ButtonKey[] buttons =
+        public static readonly List<ButtonKey> buttons =
+            new()
         {
-            new ButtonKey(0, "0"),
-            new ButtonKey(1, " 1"),
-            new ButtonKey(2, "abc2ä"),
-            new ButtonKey(3, "def3"),
+            new ButtonKey(0, "0@°%[]"),
+            new ButtonKey(1, " 1\"()"),
+            new ButtonKey(2, "abcäç2"),
+            new ButtonKey(3, "deféèê3"),
             new ButtonKey(4, "ghi4"),
             new ButtonKey(5, "jkl5"),
-            new ButtonKey(6, "mnoö6"),
+            new ButtonKey(6, "mnoöô6"),
             new ButtonKey(7, "pqrsß7"),
-            new ButtonKey(8, "tuvü8"),
-            new ButtonKey(9, "wxyz9"),
+            new ButtonKey(8, "tuvüû8"),
+            new ButtonKey(9, "wxyz$9"),
+            new ButtonKey(",", ",.!?:;"),
+            new ButtonKey("-", "-_=<>"),
+            new ButtonKey("/", "/\\|"),
+            new ButtonKey("*", "*^{}"),
+            new ButtonKey("+", "+&"),
         };
 
     }

@@ -41,20 +41,26 @@
             button9 = new Button();
             button10 = new Button();
             timerKeysWait = new System.Windows.Forms.Timer(components);
+            buttonModeSwitch = new Button();
+            button12 = new Button();
+            button13 = new Button();
+            button14 = new Button();
+            button15 = new Button();
+            button16 = new Button();
             SuspendLayout();
             // 
             // textBox1
             // 
             textBox1.BackColor = SystemColors.ControlLight;
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(374, 16);
+            textBox1.Location = new Point(463, 16);
             textBox1.Margin = new Padding(4, 5, 4, 5);
             textBox1.MaximumSize = new Size(1300, 624);
             textBox1.MinimumSize = new Size(10, 12);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(847, 583);
+            textBox1.Size = new Size(758, 583);
             textBox1.TabIndex = 0;
             textBox1.KeyPress += Form1_KeyPress;
             textBox1.KeyUp += Form1_KeyUp;
@@ -184,11 +190,89 @@
             timerKeysWait.Interval = 150;
             timerKeysWait.Tick += TimerKeysWait_Tick;
             // 
+            // buttonModeSwitch
+            // 
+            buttonModeSwitch.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonModeSwitch.Location = new Point(249, 489);
+            buttonModeSwitch.Margin = new Padding(4, 5, 4, 5);
+            buttonModeSwitch.Name = "buttonModeSwitch";
+            buttonModeSwitch.Size = new Size(117, 111);
+            buttonModeSwitch.TabIndex = 11;
+            buttonModeSwitch.Text = "#\r\nAa123";
+            buttonModeSwitch.UseVisualStyleBackColor = true;
+            buttonModeSwitch.Click += buttonModeSwitch_Click;
+            // 
+            // button12
+            // 
+            button12.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button12.Location = new Point(374, 365);
+            button12.Margin = new Padding(4, 5, 4, 5);
+            button12.Name = "button12";
+            button12.Size = new Size(69, 111);
+            button12.TabIndex = 12;
+            button12.Text = "+";
+            button12.UseVisualStyleBackColor = true;
+            button12.Click += ButtonClick;
+            // 
+            // button13
+            // 
+            button13.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button13.Location = new Point(374, 245);
+            button13.Margin = new Padding(4, 5, 4, 5);
+            button13.Name = "button13";
+            button13.Size = new Size(69, 111);
+            button13.TabIndex = 13;
+            button13.Text = "-";
+            button13.UseVisualStyleBackColor = true;
+            button13.Click += ButtonClick;
+            // 
+            // button14
+            // 
+            button14.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            button14.Location = new Point(-1, 489);
+            button14.Margin = new Padding(4, 5, 4, 5);
+            button14.Name = "button14";
+            button14.Size = new Size(117, 110);
+            button14.TabIndex = 14;
+            button14.Text = "*";
+            button14.UseVisualStyleBackColor = true;
+            button14.Click += ButtonClick;
+            // 
+            // button15
+            // 
+            button15.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button15.Location = new Point(374, 125);
+            button15.Margin = new Padding(4, 5, 4, 5);
+            button15.Name = "button15";
+            button15.Size = new Size(69, 110);
+            button15.TabIndex = 15;
+            button15.Text = "/";
+            button15.UseVisualStyleBackColor = true;
+            button15.Click += ButtonClick;
+            // 
+            // button16
+            // 
+            button16.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            button16.Location = new Point(374, 490);
+            button16.Margin = new Padding(4, 5, 4, 5);
+            button16.Name = "button16";
+            button16.Size = new Size(69, 111);
+            button16.TabIndex = 16;
+            button16.Text = ",";
+            button16.UseVisualStyleBackColor = true;
+            button16.Click += ButtonClick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1230, 629);
+            Controls.Add(button16);
+            Controls.Add(button15);
+            Controls.Add(button14);
+            Controls.Add(button13);
+            Controls.Add(button12);
+            Controls.Add(buttonModeSwitch);
             Controls.Add(button10);
             Controls.Add(button9);
             Controls.Add(button8);
@@ -223,6 +307,12 @@
         private Button button9;
         private Button button10;
         private System.Windows.Forms.Timer timerKeysWait;
+        private Button buttonModeSwitch;
+        private Button button12;
+        private Button button13;
+        private Button button14;
+        private Button button15;
+        private Button button16;
     }
 }
 
