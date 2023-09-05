@@ -13,6 +13,7 @@ namespace T9KeyboardApp
         {
             InitializeComponent();
             EntryMode = Mode.Normal;
+            DisplayEntryMode();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -20,7 +21,7 @@ namespace T9KeyboardApp
             textBox1.Text += " ";
         }
 
-#region keyhandler
+        #region keyhandler
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             ;
@@ -68,7 +69,7 @@ namespace T9KeyboardApp
                 textBox1.Text = textBox1.Text.Backspace();
             }
         }
-#endregion
+        #endregion
         private void TypeLetter()
         {
             char? c = buttonPressed?.Text[0];
@@ -82,25 +83,28 @@ namespace T9KeyboardApp
             if (EntryMode == Mode.Capital)
             {
                 EntryMode = Mode.Normal;
+                DisplayEntryMode();
             }
         }
 
         private void ButtonClick(object sender, EventArgs e)
         {
-            //((Button)sender).BackColor = Color.White;
             if (buttonPressed != sender as Button)
             {
                 if (timerIsRunning) StopTimer();
                 StartTimer();
             }
-            if (!timerIsRunning)
+            if (!timerIsRunning && EntryMode != Mode.Numeric)
             {
                 StartTimer();
             }
 
             buttonPressed = sender as Button;
             if (int.TryParse("" + buttonPressed?.Text[0], out int index))
+            {
                 Buttons.buttons[index].Hit();
+                lblActiveChar.Text = "" + Buttons.buttons[index].Value();
+            }
             else OperatorButton(buttonPressed?.Text[0]);
 
             textBox1.Select();
@@ -180,7 +184,7 @@ namespace T9KeyboardApp
         }
 
 
-        private void buttonModeSwitch_Click(object sender, EventArgs e)
+        private void ButtonModeSwitch_Click(object sender, EventArgs e)
         {
             SwitchMode();
             textBox1.Select();
@@ -189,7 +193,9 @@ namespace T9KeyboardApp
         private void SwitchMode()
         {
             EntryMode = (Mode)((int)(EntryMode + 1) % 4);
-            //colors
+            DisplayEntryMode();
         }
+
+        private void DisplayEntryMode() => lblEntryMode.Text = Params.EntryModes[(int)EntryMode];
     }
 }

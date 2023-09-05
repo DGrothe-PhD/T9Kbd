@@ -113,4 +113,11 @@ namespace T9KeyboardApp
         };
 
     }
+
+    public static class Params
+    {
+        public static readonly String[] EntryModes = {
+            "abc", "Abc", "ABC", "123" 
+        };
+    }
 }
