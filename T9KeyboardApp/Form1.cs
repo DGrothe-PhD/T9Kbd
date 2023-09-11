@@ -39,9 +39,9 @@ namespace T9KeyboardApp
             }
             else // if (int.TryParse("" + e.KeyChar, out int _))
             {
-                foreach (var b in Controls)
+                foreach (var b in Controls.OfType<Button>())
                 {
-                    if (b is Button && ((Button)b).Text[0] == e.KeyChar)
+                    if (b.Text[0] == e.KeyChar)
                     {
                         ButtonClick(b, new EventArgs());
                         break;
