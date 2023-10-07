@@ -50,6 +50,11 @@
             lblEntryMode = new Label();
             label1 = new Label();
             lblActiveChar = new Label();
+            btnMFG = new Button();
+            btnSGDH = new Button();
+            btnAnrede = new Button();
+            btnHello = new Button();
+            btnGruss = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -65,7 +70,7 @@
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(758, 583);
+            textBox1.Size = new Size(758, 460);
             textBox1.TabIndex = 0;
             textBox1.KeyPress += Form1_KeyPress;
             textBox1.KeyUp += Form1_KeyUp;
@@ -309,6 +314,7 @@
             lblEntryMode.Size = new Size(117, 36);
             lblEntryMode.TabIndex = 17;
             lblEntryMode.Text = "Abc";
+            lblEntryMode.UseMnemonic = false;
             // 
             // label1
             // 
@@ -329,6 +335,72 @@
             lblActiveChar.Size = new Size(69, 36);
             lblActiveChar.TabIndex = 19;
             lblActiveChar.Text = "x";
+            lblActiveChar.UseMnemonic = false;
+            // 
+            // btnMFG
+            // 
+            btnMFG.BackColor = Color.NavajoWhite;
+            btnMFG.FlatAppearance.BorderColor = Color.Gray;
+            btnMFG.FlatAppearance.BorderSize = 2;
+            btnMFG.Location = new Point(1140, 493);
+            btnMFG.Name = "btnMFG";
+            btnMFG.Size = new Size(78, 38);
+            btnMFG.TabIndex = 23;
+            btnMFG.Text = "MFG";
+            btnMFG.UseVisualStyleBackColor = false;
+            btnMFG.Click += Button_MFG_Click;
+            // 
+            // btnSGDH
+            // 
+            btnSGDH.BackColor = Color.NavajoWhite;
+            btnSGDH.FlatAppearance.BorderColor = Color.Gray;
+            btnSGDH.FlatAppearance.BorderSize = 2;
+            btnSGDH.Location = new Point(1056, 493);
+            btnSGDH.Name = "btnSGDH";
+            btnSGDH.Size = new Size(78, 38);
+            btnSGDH.TabIndex = 24;
+            btnSGDH.Text = "SGDH";
+            btnSGDH.UseVisualStyleBackColor = false;
+            btnSGDH.Click += BtnSGDH_Click;
+            // 
+            // btnAnrede
+            // 
+            btnAnrede.BackColor = Color.NavajoWhite;
+            btnAnrede.FlatAppearance.BorderColor = Color.Gray;
+            btnAnrede.FlatAppearance.BorderSize = 2;
+            btnAnrede.Location = new Point(1056, 537);
+            btnAnrede.Name = "btnAnrede";
+            btnAnrede.Size = new Size(78, 38);
+            btnAnrede.TabIndex = 25;
+            btnAnrede.Text = "Liebe";
+            btnAnrede.UseVisualStyleBackColor = false;
+            btnAnrede.Click += BtnAnrede_Click;
+            // 
+            // btnHello
+            // 
+            btnHello.BackColor = Color.NavajoWhite;
+            btnHello.FlatAppearance.BorderColor = Color.Gray;
+            btnHello.FlatAppearance.BorderSize = 2;
+            btnHello.Location = new Point(972, 537);
+            btnHello.Name = "btnHello";
+            btnHello.Size = new Size(78, 38);
+            btnHello.TabIndex = 26;
+            btnHello.Text = "Hallo";
+            btnHello.UseVisualStyleBackColor = false;
+            btnHello.Click += BtnHello_Click;
+            // 
+            // btnGruss
+            // 
+            btnGruss.BackColor = Color.NavajoWhite;
+            btnGruss.FlatAppearance.BorderColor = Color.Gray;
+            btnGruss.FlatAppearance.BorderSize = 2;
+            btnGruss.Location = new Point(1140, 537);
+            btnGruss.Name = "btnGruss";
+            btnGruss.Size = new Size(78, 38);
+            btnGruss.TabIndex = 27;
+            btnGruss.Text = "Herzl.";
+            btnGruss.UseVisualStyleBackColor = false;
+            btnGruss.Click += BtnGruss_Click;
             // 
             // Form1
             // 
@@ -337,6 +409,11 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1230, 629);
+            Controls.Add(btnGruss);
+            Controls.Add(btnHello);
+            Controls.Add(btnAnrede);
+            Controls.Add(btnSGDH);
+            Controls.Add(btnMFG);
             Controls.Add(lblActiveChar);
             Controls.Add(label1);
             Controls.Add(lblEntryMode);
@@ -389,6 +466,11 @@
         private Label lblEntryMode;
         private Label label1;
         private Label lblActiveChar;
+        private Button btnMFG;
+        private Button btnSGDH;
+        private Button btnAnrede;
+        private Button btnHello;
+        private Button btnGruss;
     }
 }
 

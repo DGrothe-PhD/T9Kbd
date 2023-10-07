@@ -5,6 +5,7 @@ namespace T9KeyboardApp
     public partial class Form1 : Form
     {
         public Mode EntryMode { get; set; }
+        public List<AddTextButton> AddTextButtons { get; set; }
         int counter = 0;
         bool timerIsRunning = false;
         Button? buttonPressed = null;
@@ -12,6 +13,17 @@ namespace T9KeyboardApp
         public Form1()
         {
             InitializeComponent();
+            AddTextButtons = new List<AddTextButton>()
+            {
+                new(textBox1, "lich"), new(textBox1, "keit"), new(textBox1, "schaft"),
+            };
+            foreach (AddTextButton button in AddTextButtons)
+            {
+                Controls.Add(button);
+                button.Show();
+            }
+
+            textBox1.Height = 480;
             EntryMode = Mode.Normal;
             DisplayEntryMode();
         }
@@ -103,9 +115,12 @@ namespace T9KeyboardApp
             if (int.TryParse("" + buttonPressed?.Text[0], out int index))
             {
                 Buttons.buttons[index].Hit();
-                lblActiveChar.Text = "" + Buttons.buttons[index].Value();
+                lblActiveChar.Text = "" + Buttons.buttons[index].Value().ToString();
             }
-            else OperatorButton(buttonPressed?.Text[0]);
+            else
+            {
+                OperatorButton(buttonPressed?.Text[0]);
+            }
 
             textBox1.Select();
         }
@@ -114,24 +129,18 @@ namespace T9KeyboardApp
         {
             if (name == null)
                 return;
-            switch (name)
-            {
-                case ',':
-                    Buttons.buttons[10].Hit();
-                    break;
-                case '-':
-                    Buttons.buttons[11].Hit();
-                    break;
-                case '/':
-                    Buttons.buttons[12].Hit();
-                    break;
-                case '*':
-                    Buttons.buttons[13].Hit();
-                    break;
-                case '+':
-                    Buttons.buttons[14].Hit();
-                    break;
-            }
+            ButtonKey? representingButton
+                = name switch
+                {
+                    ',' => Buttons.buttons[10],
+                    '-' => Buttons.buttons[11],
+                    '/' => Buttons.buttons[12],
+                    '*' => Buttons.buttons[13],
+                    '+' => Buttons.buttons[14],
+                    _ => null
+                };
+            representingButton?.Hit();
+            lblActiveChar.Text = "" + representingButton?.Value();
         }
 
         private char? OperatorWrite(char? name)
@@ -139,21 +148,15 @@ namespace T9KeyboardApp
             char? value = null;
             if (name == null)
                 return value;
-            switch (name)
+            return name switch
             {
-                case ',':
-                    return Buttons.buttons[10].Key(EntryMode);
-                case '-':
-                    return Buttons.buttons[11].Key(EntryMode);
-                case '/':
-                    return Buttons.buttons[12].Key(EntryMode);
-                case '*':
-                    return Buttons.buttons[13].Key(EntryMode);
-                case '+':
-                    return Buttons.buttons[14].Key(EntryMode);
-                default:
-                    return value;
-            }
+                ',' => Buttons.buttons[10].Key(EntryMode),
+                '-' => Buttons.buttons[11].Key(EntryMode),
+                '/' => Buttons.buttons[12].Key(EntryMode),
+                '*' => Buttons.buttons[13].Key(EntryMode),
+                '+' => Buttons.buttons[14].Key(EntryMode),
+                _ => value,
+            };
         }
 
         private void TimerKeysWait_Tick(object sender, EventArgs e)
@@ -197,5 +200,41 @@ namespace T9KeyboardApp
         }
 
         private void DisplayEntryMode() => lblEntryMode.Text = Params.EntryModes[(int)EntryMode];
+
+        private void Button_MFG_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += Environment.NewLine + Environment.NewLine
+                + "Mit freundlichen Grüßen" + Environment.NewLine
+                + Environment.NewLine;
+            textBox1.Select();
+        }
+
+        private void BtnSGDH_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += "Sehr geehrte Damen und Herren," + Environment.NewLine
+                + Environment.NewLine;
+            textBox1.Select();
+        }
+
+        private void BtnAnrede_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += "Liebe";
+            textBox1.Select();
+        }
+
+        private void BtnHello_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += "Hallo ";
+            textBox1.Select();
+        }
+
+        private void BtnGruss_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += Environment.NewLine + Environment.NewLine
+                + "Herzliche Grüße" + Environment.NewLine
+                + Environment.NewLine;
+            textBox1.Select();
+        }
+
     }
 }
