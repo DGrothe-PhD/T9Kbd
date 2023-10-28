@@ -236,5 +236,12 @@ namespace T9KeyboardApp
             textBox1.Select();
         }
 
+        private void BtnAWDS_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += Environment.NewLine + Environment.NewLine
+                + "Auf Wiedersehen!" + Environment.NewLine
+                + Environment.NewLine;
+            textBox1.Select();
+        }
     }
 }

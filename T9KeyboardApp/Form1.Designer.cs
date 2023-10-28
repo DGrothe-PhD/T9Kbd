@@ -55,6 +55,7 @@
             btnAnrede = new Button();
             btnHello = new Button();
             btnGruss = new Button();
+            btnAWDS = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -402,6 +403,19 @@
             btnGruss.UseVisualStyleBackColor = false;
             btnGruss.Click += BtnGruss_Click;
             // 
+            // btnAWDS
+            // 
+            btnAWDS.BackColor = Color.NavajoWhite;
+            btnAWDS.FlatAppearance.BorderColor = Color.Gray;
+            btnAWDS.FlatAppearance.BorderSize = 2;
+            btnAWDS.Location = new Point(972, 493);
+            btnAWDS.Name = "btnAWDS";
+            btnAWDS.Size = new Size(78, 38);
+            btnAWDS.TabIndex = 28;
+            btnAWDS.Text = "AWDS!";
+            btnAWDS.UseVisualStyleBackColor = false;
+            btnAWDS.Click += BtnAWDS_Click;
+            // 
             // Form1
             // 
             AccessibleDescription = "T9 Tastatur. Geben Sie Text mit der Nummerntastatur ein, ungefähr wie auf alten Handys.";
@@ -409,6 +423,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1230, 629);
+            Controls.Add(btnAWDS);
             Controls.Add(btnGruss);
             Controls.Add(btnHello);
             Controls.Add(btnAnrede);
@@ -471,6 +486,7 @@
         private Button btnAnrede;
         private Button btnHello;
         private Button btnGruss;
+        private Button btnAWDS;
     }
 }
 
