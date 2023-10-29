@@ -1,3 +1,5 @@
+import json
+
 def ifromchar(q):
     c = q.lower()
     if c < 'd':
@@ -26,10 +28,26 @@ def numify(text):
             result += x
     return result
 
+
 def jsonify(text):
+    with open(f"T9.json") as jsd:
+        json_data = json.load(jsd)
+    jsd.close()
+    #
     word = text.split()
-    for w in word:
-        print(f'"{numify(w)}" : [ "{w}" ],')
+    for x in word:
+        w = x.strip(".,;:-!?'")
+        textkey = numify(w)
+        if not textkey in json_data:
+            json_data[textkey] = [ w ]
+        else:
+            entry = json_data[textkey]
+            if not w in entry:
+                entry.append(w)
+                json_data[textkey] = entry
+    # TODO testing, writing to file
+    print(json_data)
+        #print(f'"{numify(w)}" : [ "{w}" ],')
 
 # numify("Auf Wiedersehen!")
 # '283 94333773436!'
