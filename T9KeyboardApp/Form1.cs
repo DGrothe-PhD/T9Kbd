@@ -80,6 +80,13 @@ namespace T9KeyboardApp
             {
                 textBox1.Text = textBox1.Text.Backspace();
             }
+            else if (e.KeyCode == Keys.F1)
+            {
+                MessageBox.Show("F3 : Copy to clipboard" + Environment.NewLine
+                    + "F6 : Clear field" + Environment.NewLine
+                    + "..." + Environment.NewLine
+                );
+            }
         }
         #endregion
         private void TypeLetter()

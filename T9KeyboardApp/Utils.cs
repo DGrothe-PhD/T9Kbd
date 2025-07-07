@@ -28,32 +28,20 @@ namespace T9KeyboardApp
         private byte hittimes = 0;
         public ButtonKey(byte number, params char[] chars)
         {
-            keys = new List<char>();
-            foreach (char c in chars)
-            {
-                keys.Add(c);
-            }
+            keys = [.. chars];
             this.name = "" + number;
             this.hittimes = 0;
         }
 
         public ButtonKey(byte number, string chars)
         {
-            keys = new List<char>();
-            foreach (char c in chars)
-            {
-                keys.Add(c);
-            }
+            keys = [.. chars];
             this.name = "" + number;
         }
 
         public ButtonKey(string name, string chars)
         {
-            keys = new List<char>();
-            foreach (char c in chars)
-            {
-                keys.Add(c);
-            }
+            keys = [.. chars];
             this.name = name;
         }
 
@@ -69,19 +57,12 @@ namespace T9KeyboardApp
         public char? Key(Mode entryMode = Mode.Normal)
         {
             char? c = null;
-            switch (entryMode)
+            c = entryMode switch
             {
-                case Mode.Normal:
-                    c = Value();
-                    break;
-                case Mode.Numeric:
-                    c = Name[0];
-                    break;
-                default:
-                    c = char.ToUpper(Value());
-                    break;
-            }
-
+                Mode.Normal => Value(),
+                Mode.Numeric => Name[0],
+                _ => (char?)char.ToUpper(Value()),
+            };
             Reset();
             return c;
         }

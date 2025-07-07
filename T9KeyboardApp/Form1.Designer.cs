@@ -63,7 +63,7 @@
             textBox1.AccessibleDescription = "Textfeld";
             textBox1.AccessibleName = " ";
             textBox1.BackColor = SystemColors.ControlLight;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Font = new Font("Segoe UI", 12F);
             textBox1.Location = new Point(463, 16);
             textBox1.Margin = new Padding(4, 5, 4, 5);
             textBox1.MaximumSize = new Size(1300, 624);
@@ -80,7 +80,7 @@
             // 
             button1.AccessibleDescription = "Taste 1";
             button1.AccessibleName = "1, Leerzeichen, Anführungzeichen";
-            button1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Font = new Font("Microsoft Sans Serif", 12F);
             button1.Location = new Point(-1, 125);
             button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
@@ -94,7 +94,7 @@
             // 
             button2.AccessibleDescription = "Taste 2";
             button2.AccessibleName = "2, A, B, oder C";
-            button2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Font = new Font("Microsoft Sans Serif", 12F);
             button2.Location = new Point(124, 125);
             button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
@@ -108,7 +108,7 @@
             // 
             button3.AccessibleDescription = "Taste 3";
             button3.AccessibleName = "3, D, E, F";
-            button3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.Font = new Font("Microsoft Sans Serif", 12F);
             button3.Location = new Point(249, 125);
             button3.Margin = new Padding(4, 5, 4, 5);
             button3.Name = "button3";
@@ -122,7 +122,7 @@
             // 
             button4.AccessibleDescription = "Taste 4";
             button4.AccessibleName = "4, G, H, I";
-            button4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.Font = new Font("Microsoft Sans Serif", 12F);
             button4.Location = new Point(-1, 245);
             button4.Margin = new Padding(4, 5, 4, 5);
             button4.Name = "button4";
@@ -136,7 +136,7 @@
             // 
             button5.AccessibleDescription = "Taste 5";
             button5.AccessibleName = "5, J, K, L";
-            button5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button5.Font = new Font("Microsoft Sans Serif", 12F);
             button5.Location = new Point(124, 245);
             button5.Margin = new Padding(4, 5, 4, 5);
             button5.Name = "button5";
@@ -150,7 +150,7 @@
             // 
             button6.AccessibleDescription = "Taste 6";
             button6.AccessibleName = "6, M, N, O";
-            button6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button6.Font = new Font("Microsoft Sans Serif", 12F);
             button6.Location = new Point(249, 245);
             button6.Margin = new Padding(4, 5, 4, 5);
             button6.Name = "button6";
@@ -164,7 +164,7 @@
             // 
             button7.AccessibleDescription = "Taste 7";
             button7.AccessibleName = "7, P, Q, R, S";
-            button7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button7.Font = new Font("Microsoft Sans Serif", 12F);
             button7.Location = new Point(-1, 365);
             button7.Margin = new Padding(4, 5, 4, 5);
             button7.Name = "button7";
@@ -178,7 +178,7 @@
             // 
             button8.AccessibleDescription = "Taste 8";
             button8.AccessibleName = "8, T, U, V";
-            button8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button8.Font = new Font("Microsoft Sans Serif", 12F);
             button8.Location = new Point(124, 365);
             button8.Margin = new Padding(4, 5, 4, 5);
             button8.Name = "button8";
@@ -192,7 +192,7 @@
             // 
             button9.AccessibleDescription = "Taste 9";
             button9.AccessibleName = "9, W, X, Y, Z";
-            button9.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button9.Font = new Font("Microsoft Sans Serif", 12F);
             button9.Location = new Point(249, 365);
             button9.Margin = new Padding(4, 5, 4, 5);
             button9.Name = "button9";
@@ -206,7 +206,7 @@
             // 
             button10.AccessibleDescription = "Taste Null";
             button10.AccessibleName = "Null, At-Zeichen, Grad, Prozent";
-            button10.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            button10.Font = new Font("Microsoft Sans Serif", 13.8F);
             button10.Location = new Point(124, 489);
             button10.Margin = new Padding(4, 5, 4, 5);
             button10.Name = "button10";
@@ -225,7 +225,7 @@
             // 
             buttonModeSwitch.AccessibleDescription = "Rautetaste";
             buttonModeSwitch.AccessibleName = "Rautetaste, Umschalten, Feststellen, Zifferneingabe";
-            buttonModeSwitch.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonModeSwitch.Font = new Font("Microsoft Sans Serif", 12F);
             buttonModeSwitch.Location = new Point(249, 489);
             buttonModeSwitch.Margin = new Padding(4, 5, 4, 5);
             buttonModeSwitch.Name = "buttonModeSwitch";
@@ -239,7 +239,7 @@
             // 
             button12.AccessibleDescription = "Plustaste";
             button12.AccessibleName = "Plus, kaufmännisches Und";
-            button12.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button12.Font = new Font("Microsoft Sans Serif", 12F);
             button12.Location = new Point(374, 365);
             button12.Margin = new Padding(4, 5, 4, 5);
             button12.Name = "button12";
@@ -253,7 +253,7 @@
             // 
             button13.AccessibleDescription = "Minustaste";
             button13.AccessibleName = "Minus, Unterstrich, Gleich";
-            button13.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button13.Font = new Font("Microsoft Sans Serif", 12F);
             button13.Location = new Point(374, 245);
             button13.Margin = new Padding(4, 5, 4, 5);
             button13.Name = "button13";
@@ -267,7 +267,7 @@
             // 
             button14.AccessibleDescription = "Taste Stern";
             button14.AccessibleName = "Stern, Dachel";
-            button14.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            button14.Font = new Font("Microsoft Sans Serif", 24F);
             button14.Location = new Point(-1, 489);
             button14.Margin = new Padding(4, 5, 4, 5);
             button14.Name = "button14";
@@ -281,7 +281,7 @@
             // 
             button15.AccessibleDescription = "Taste Geteilt";
             button15.AccessibleName = "Schrägstrich, Backslash, senkrechter Strich";
-            button15.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button15.Font = new Font("Microsoft Sans Serif", 12F);
             button15.Location = new Point(374, 125);
             button15.Margin = new Padding(4, 5, 4, 5);
             button15.Name = "button15";
@@ -295,7 +295,7 @@
             // 
             button16.AccessibleDescription = "Kommataste";
             button16.AccessibleName = "Komma, Punkt, Ausrufezeichen, Fragezeichen, Doppelpunkt, Semikolon";
-            button16.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            button16.Font = new Font("Microsoft Sans Serif", 24F);
             button16.Location = new Point(374, 490);
             button16.Margin = new Padding(4, 5, 4, 5);
             button16.Name = "button16";
@@ -309,7 +309,7 @@
             // 
             lblEntryMode.BackColor = SystemColors.ControlLightLight;
             lblEntryMode.BorderStyle = BorderStyle.FixedSingle;
-            lblEntryMode.Font = new Font("Cambria", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblEntryMode.Font = new Font("Cambria", 10.8F, FontStyle.Bold);
             lblEntryMode.Location = new Point(249, 25);
             lblEntryMode.Name = "lblEntryMode";
             lblEntryMode.Size = new Size(117, 36);
@@ -330,7 +330,7 @@
             // 
             lblActiveChar.BackColor = Color.AntiqueWhite;
             lblActiveChar.BorderStyle = BorderStyle.FixedSingle;
-            lblActiveChar.Font = new Font("Cambria", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblActiveChar.Font = new Font("Cambria", 10.8F, FontStyle.Bold);
             lblActiveChar.Location = new Point(374, 25);
             lblActiveChar.Name = "lblActiveChar";
             lblActiveChar.Size = new Size(69, 36);
