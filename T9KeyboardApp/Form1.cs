@@ -1,10 +1,16 @@
 using System;
+using System.ComponentModel;
 
 namespace T9KeyboardApp
 {
     public partial class Form1 : Form
     {
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Mode EntryMode { get; set; }
+
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<AddTextButton> AddTextButtons { get; set; }
         int counter = 0;
         bool timerIsRunning = false;
