@@ -19,10 +19,11 @@ namespace T9KeyboardApp
         public Form1()
         {
             InitializeComponent();
-            AddTextButtons = new List<AddTextButton>()
-            {
-                new(textBox1, "lich"), new(textBox1, "keit"), new(textBox1, "schaft"),
-            };
+            AddTextButtons =
+            [
+                new(textBox1, "lich"), new(textBox1, "heit"), new(textBox1, "keit"), 
+                new(textBox1, "schaft"),new(textBox1, "ung"),
+            ];
             foreach (AddTextButton button in AddTextButtons)
             {
                 Controls.Add(button);
@@ -70,28 +71,26 @@ namespace T9KeyboardApp
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            switch (e.KeyCode)
             {
-                textBox1.Text += Environment.NewLine;
-            }
-            else if (e.KeyCode == Keys.F3)
-            {
-                Clipboard.SetText(textBox1.Text);
-            }
-            else if (e.KeyCode == Keys.F6)
-            {
-                textBox1.Text = "";
-            }
-            else if (e.KeyCode == Keys.Back)
-            {
-                textBox1.Text = textBox1.Text.Backspace();
-            }
-            else if (e.KeyCode == Keys.F1)
-            {
-                MessageBox.Show("F3 : Copy to clipboard" + Environment.NewLine
-                    + "F6 : Clear field" + Environment.NewLine
-                    + "..." + Environment.NewLine
-                );
+                case Keys.Enter:
+                    textBox1.Text += Environment.NewLine;
+                    break;
+                case Keys.F3:
+                    Clipboard.SetText(textBox1.Text);
+                    break;
+                case Keys.F6:
+                    textBox1.Text = "";
+                    break;
+                case Keys.Back:
+                    textBox1.Text = textBox1.Text.Backspace();
+                    break;
+                case Keys.F1:
+                    MessageBox.Show("F3 : Copy to clipboard" + Environment.NewLine
+                        + "F6 : Clear field" + Environment.NewLine
+                        + "..." + Environment.NewLine
+                    );
+                    break;
             }
         }
         #endregion
@@ -99,11 +98,14 @@ namespace T9KeyboardApp
         {
             char? c = buttonPressed?.Text[0];
             if (buttonPressed != null
-                && int.TryParse("" + c, out int index)
-            )
+                && int.TryParse("" + c, out int index) )
+            {
                 textBox1.Text += Buttons.buttons[index].Key(EntryMode);
+            }
             else
+            {
                 textBox1.Text += OperatorWrite(c);
+            }
 
             if (EntryMode == Mode.Capital)
             {
@@ -158,9 +160,6 @@ namespace T9KeyboardApp
 
         private char? OperatorWrite(char? name)
         {
-            char? value = null;
-            if (name == null)
-                return value;
             return name switch
             {
                 ',' => Buttons.buttons[10].Key(EntryMode),
@@ -168,7 +167,7 @@ namespace T9KeyboardApp
                 '/' => Buttons.buttons[12].Key(EntryMode),
                 '*' => Buttons.buttons[13].Key(EntryMode),
                 '+' => Buttons.buttons[14].Key(EntryMode),
-                _ => value,
+                _ => null,
             };
         }
 

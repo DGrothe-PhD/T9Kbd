@@ -56,6 +56,8 @@
             btnHello = new Button();
             btnGruss = new Button();
             btnAWDS = new Button();
+            label2 = new Label();
+            textSuggestions = new TextBox();
             SuspendLayout();
             // 
             // textBox1
@@ -81,10 +83,10 @@
             button1.AccessibleDescription = "Taste 1";
             button1.AccessibleName = "1, Leerzeichen, Anführungzeichen";
             button1.Font = new Font("Microsoft Sans Serif", 12F);
-            button1.Location = new Point(-1, 125);
+            button1.Location = new Point(9, 165);
             button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(117, 111);
+            button1.Size = new Size(117, 100);
             button1.TabIndex = 1;
             button1.Text = "1\r\no_o";
             button1.UseVisualStyleBackColor = true;
@@ -95,10 +97,10 @@
             button2.AccessibleDescription = "Taste 2";
             button2.AccessibleName = "2, A, B, oder C";
             button2.Font = new Font("Microsoft Sans Serif", 12F);
-            button2.Location = new Point(124, 125);
+            button2.Location = new Point(134, 165);
             button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
-            button2.Size = new Size(117, 111);
+            button2.Size = new Size(117, 100);
             button2.TabIndex = 2;
             button2.Text = "2\r\nABC";
             button2.UseVisualStyleBackColor = true;
@@ -109,10 +111,10 @@
             button3.AccessibleDescription = "Taste 3";
             button3.AccessibleName = "3, D, E, F";
             button3.Font = new Font("Microsoft Sans Serif", 12F);
-            button3.Location = new Point(249, 125);
+            button3.Location = new Point(259, 165);
             button3.Margin = new Padding(4, 5, 4, 5);
             button3.Name = "button3";
-            button3.Size = new Size(117, 111);
+            button3.Size = new Size(117, 100);
             button3.TabIndex = 3;
             button3.Text = "3\r\nDEF";
             button3.UseVisualStyleBackColor = true;
@@ -123,10 +125,10 @@
             button4.AccessibleDescription = "Taste 4";
             button4.AccessibleName = "4, G, H, I";
             button4.Font = new Font("Microsoft Sans Serif", 12F);
-            button4.Location = new Point(-1, 245);
+            button4.Location = new Point(9, 275);
             button4.Margin = new Padding(4, 5, 4, 5);
             button4.Name = "button4";
-            button4.Size = new Size(117, 111);
+            button4.Size = new Size(117, 100);
             button4.TabIndex = 4;
             button4.Text = "4\r\nGHI";
             button4.UseVisualStyleBackColor = true;
@@ -137,10 +139,10 @@
             button5.AccessibleDescription = "Taste 5";
             button5.AccessibleName = "5, J, K, L";
             button5.Font = new Font("Microsoft Sans Serif", 12F);
-            button5.Location = new Point(124, 245);
+            button5.Location = new Point(134, 275);
             button5.Margin = new Padding(4, 5, 4, 5);
             button5.Name = "button5";
-            button5.Size = new Size(117, 111);
+            button5.Size = new Size(117, 100);
             button5.TabIndex = 5;
             button5.Text = "5\r\nJKL";
             button5.UseVisualStyleBackColor = true;
@@ -151,10 +153,10 @@
             button6.AccessibleDescription = "Taste 6";
             button6.AccessibleName = "6, M, N, O";
             button6.Font = new Font("Microsoft Sans Serif", 12F);
-            button6.Location = new Point(249, 245);
+            button6.Location = new Point(259, 275);
             button6.Margin = new Padding(4, 5, 4, 5);
             button6.Name = "button6";
-            button6.Size = new Size(117, 111);
+            button6.Size = new Size(117, 100);
             button6.TabIndex = 6;
             button6.Text = "6\r\nMNO";
             button6.UseVisualStyleBackColor = true;
@@ -165,10 +167,10 @@
             button7.AccessibleDescription = "Taste 7";
             button7.AccessibleName = "7, P, Q, R, S";
             button7.Font = new Font("Microsoft Sans Serif", 12F);
-            button7.Location = new Point(-1, 365);
+            button7.Location = new Point(9, 385);
             button7.Margin = new Padding(4, 5, 4, 5);
             button7.Name = "button7";
-            button7.Size = new Size(117, 111);
+            button7.Size = new Size(117, 100);
             button7.TabIndex = 7;
             button7.Text = "7\r\nPQRS";
             button7.UseVisualStyleBackColor = true;
@@ -179,10 +181,10 @@
             button8.AccessibleDescription = "Taste 8";
             button8.AccessibleName = "8, T, U, V";
             button8.Font = new Font("Microsoft Sans Serif", 12F);
-            button8.Location = new Point(124, 365);
+            button8.Location = new Point(134, 385);
             button8.Margin = new Padding(4, 5, 4, 5);
             button8.Name = "button8";
-            button8.Size = new Size(117, 111);
+            button8.Size = new Size(117, 100);
             button8.TabIndex = 8;
             button8.Text = "8\r\nTUV";
             button8.UseVisualStyleBackColor = true;
@@ -193,10 +195,10 @@
             button9.AccessibleDescription = "Taste 9";
             button9.AccessibleName = "9, W, X, Y, Z";
             button9.Font = new Font("Microsoft Sans Serif", 12F);
-            button9.Location = new Point(249, 365);
+            button9.Location = new Point(259, 385);
             button9.Margin = new Padding(4, 5, 4, 5);
             button9.Name = "button9";
-            button9.Size = new Size(117, 111);
+            button9.Size = new Size(117, 100);
             button9.TabIndex = 9;
             button9.Text = "9\r\nWXYZ";
             button9.UseVisualStyleBackColor = true;
@@ -207,10 +209,10 @@
             button10.AccessibleDescription = "Taste Null";
             button10.AccessibleName = "Null, At-Zeichen, Grad, Prozent";
             button10.Font = new Font("Microsoft Sans Serif", 13.8F);
-            button10.Location = new Point(124, 489);
+            button10.Location = new Point(134, 499);
             button10.Margin = new Padding(4, 5, 4, 5);
             button10.Name = "button10";
-            button10.Size = new Size(117, 111);
+            button10.Size = new Size(117, 100);
             button10.TabIndex = 10;
             button10.Text = "0";
             button10.UseVisualStyleBackColor = true;
@@ -226,10 +228,10 @@
             buttonModeSwitch.AccessibleDescription = "Rautetaste";
             buttonModeSwitch.AccessibleName = "Rautetaste, Umschalten, Feststellen, Zifferneingabe";
             buttonModeSwitch.Font = new Font("Microsoft Sans Serif", 12F);
-            buttonModeSwitch.Location = new Point(249, 489);
+            buttonModeSwitch.Location = new Point(259, 499);
             buttonModeSwitch.Margin = new Padding(4, 5, 4, 5);
             buttonModeSwitch.Name = "buttonModeSwitch";
-            buttonModeSwitch.Size = new Size(117, 111);
+            buttonModeSwitch.Size = new Size(117, 100);
             buttonModeSwitch.TabIndex = 11;
             buttonModeSwitch.Text = "#\r\nAa123";
             buttonModeSwitch.UseVisualStyleBackColor = true;
@@ -240,10 +242,10 @@
             button12.AccessibleDescription = "Plustaste";
             button12.AccessibleName = "Plus, kaufmännisches Und";
             button12.Font = new Font("Microsoft Sans Serif", 12F);
-            button12.Location = new Point(374, 365);
+            button12.Location = new Point(384, 385);
             button12.Margin = new Padding(4, 5, 4, 5);
             button12.Name = "button12";
-            button12.Size = new Size(69, 111);
+            button12.Size = new Size(69, 100);
             button12.TabIndex = 12;
             button12.Text = "+";
             button12.UseVisualStyleBackColor = true;
@@ -254,10 +256,10 @@
             button13.AccessibleDescription = "Minustaste";
             button13.AccessibleName = "Minus, Unterstrich, Gleich";
             button13.Font = new Font("Microsoft Sans Serif", 12F);
-            button13.Location = new Point(374, 245);
+            button13.Location = new Point(384, 275);
             button13.Margin = new Padding(4, 5, 4, 5);
             button13.Name = "button13";
-            button13.Size = new Size(69, 111);
+            button13.Size = new Size(69, 100);
             button13.TabIndex = 13;
             button13.Text = "-";
             button13.UseVisualStyleBackColor = true;
@@ -268,10 +270,10 @@
             button14.AccessibleDescription = "Taste Stern";
             button14.AccessibleName = "Stern, Dachel";
             button14.Font = new Font("Microsoft Sans Serif", 24F);
-            button14.Location = new Point(-1, 489);
+            button14.Location = new Point(9, 499);
             button14.Margin = new Padding(4, 5, 4, 5);
             button14.Name = "button14";
-            button14.Size = new Size(117, 110);
+            button14.Size = new Size(117, 100);
             button14.TabIndex = 14;
             button14.Text = "*";
             button14.UseVisualStyleBackColor = true;
@@ -282,10 +284,10 @@
             button15.AccessibleDescription = "Taste Geteilt";
             button15.AccessibleName = "Schrägstrich, Backslash, senkrechter Strich";
             button15.Font = new Font("Microsoft Sans Serif", 12F);
-            button15.Location = new Point(374, 125);
+            button15.Location = new Point(384, 165);
             button15.Margin = new Padding(4, 5, 4, 5);
             button15.Name = "button15";
-            button15.Size = new Size(69, 110);
+            button15.Size = new Size(69, 100);
             button15.TabIndex = 15;
             button15.Text = "/";
             button15.UseVisualStyleBackColor = true;
@@ -296,10 +298,10 @@
             button16.AccessibleDescription = "Kommataste";
             button16.AccessibleName = "Komma, Punkt, Ausrufezeichen, Fragezeichen, Doppelpunkt, Semikolon";
             button16.Font = new Font("Microsoft Sans Serif", 24F);
-            button16.Location = new Point(374, 490);
+            button16.Location = new Point(384, 499);
             button16.Margin = new Padding(4, 5, 4, 5);
             button16.Name = "button16";
-            button16.Size = new Size(69, 111);
+            button16.Size = new Size(69, 100);
             button16.TabIndex = 16;
             button16.Text = ",";
             button16.UseVisualStyleBackColor = true;
@@ -310,7 +312,7 @@
             lblEntryMode.BackColor = SystemColors.ControlLightLight;
             lblEntryMode.BorderStyle = BorderStyle.FixedSingle;
             lblEntryMode.Font = new Font("Cambria", 10.8F, FontStyle.Bold);
-            lblEntryMode.Location = new Point(249, 25);
+            lblEntryMode.Location = new Point(259, 25);
             lblEntryMode.Name = "lblEntryMode";
             lblEntryMode.Size = new Size(117, 36);
             lblEntryMode.TabIndex = 17;
@@ -320,7 +322,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(193, 25);
+            label1.Location = new Point(203, 25);
             label1.Name = "label1";
             label1.Size = new Size(48, 20);
             label1.TabIndex = 18;
@@ -331,7 +333,7 @@
             lblActiveChar.BackColor = Color.AntiqueWhite;
             lblActiveChar.BorderStyle = BorderStyle.FixedSingle;
             lblActiveChar.Font = new Font("Cambria", 10.8F, FontStyle.Bold);
-            lblActiveChar.Location = new Point(374, 25);
+            lblActiveChar.Location = new Point(384, 25);
             lblActiveChar.Name = "lblActiveChar";
             lblActiveChar.Size = new Size(69, 36);
             lblActiveChar.TabIndex = 19;
@@ -416,6 +418,24 @@
             btnAWDS.UseVisualStyleBackColor = false;
             btnAWDS.Click += BtnAWDS_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 65);
+            label2.Name = "label2";
+            label2.Size = new Size(112, 20);
+            label2.TabIndex = 29;
+            label2.Text = "Wortvorschläge";
+            // 
+            // textSuggestions
+            // 
+            textSuggestions.BackColor = Color.DarkSeaGreen;
+            textSuggestions.Location = new Point(11, 90);
+            textSuggestions.Multiline = true;
+            textSuggestions.Name = "textSuggestions";
+            textSuggestions.Size = new Size(442, 63);
+            textSuggestions.TabIndex = 30;
+            // 
             // Form1
             // 
             AccessibleDescription = "T9 Tastatur. Geben Sie Text mit der Nummerntastatur ein, ungefähr wie auf alten Handys.";
@@ -423,6 +443,8 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1230, 629);
+            Controls.Add(textSuggestions);
+            Controls.Add(label2);
             Controls.Add(btnAWDS);
             Controls.Add(btnGruss);
             Controls.Add(btnHello);
@@ -487,6 +509,8 @@
         private Button btnHello;
         private Button btnGruss;
         private Button btnAWDS;
+        private Label label2;
+        private TextBox textSuggestions;
     }
 }
 

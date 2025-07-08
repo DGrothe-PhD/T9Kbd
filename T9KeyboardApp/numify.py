@@ -51,3 +51,20 @@ def jsonify(text):
 
 # numify("Auf Wiedersehen!")
 # '283 94333773436!'
+
+##### neue Entwicklung 07.07.2025:
+t9dict = {\
+    2: "abcä", 3:"def", 4:"ghi", 5:"jkl", 6:"mnoö",\
+    7:"pqrsß", 8:"tuvü", 9:"wxyz"\
+    }
+
+def numify(s):
+    result = ""
+    for c in s.lower():
+        for x, u in t9dict.items():
+            if c in u:
+                result += str(x)
+                break
+        else:
+            result += c
+    return result
