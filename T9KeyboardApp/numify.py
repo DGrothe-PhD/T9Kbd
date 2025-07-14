@@ -68,3 +68,17 @@ def numify(s):
         else:
             result += c
     return result
+    
+def numone(s):
+    newitem = ""
+    for c in s.lower():
+        for x, u in t9dict.items():
+            if c in u:
+                newitem += str(x)
+                break
+        else:
+            newitem += c
+    return f"\t\"{newitem}\" : [ \"{s}\" ],"
+    
+for x in "dass als können kann konnte gekonnt".split(" "):
+    print(numone(x))
